@@ -1,6 +1,8 @@
 /* reset css */
 body,
 h1,
+h2,
+h3,
 p,
 a,
 input {
@@ -169,8 +171,27 @@ main {
     border: 1px solid #BDBDBD;
     border-radius: 5px;
     grid-area: 3/1/4/2;
-    overflow: hidden;
+    overflow-y: scroll;
     position: relative;
+}
+
+/* 스크롤바 전체 영역 */
+.picture::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 스크롤이 움직이는 영역 */
+.picture::-webkit-scrollbar-track {
+    background-color: #EAE8FE;
+    border-radius: 50px;
+}
+
+/* 스크롤 */
+.picture::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 50px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
 }
 
 .container-mycola-left {
@@ -241,17 +262,27 @@ section .gain {
     gap: 6px;
     
     padding: 12px 18px 12px 12px;
-    position: relative;
+    /* position: relative; */
+    overflow-y: auto;
 }
 
-.scroll-bar {
-    position: absolute;
-    top: 9px;
-    right: 4px;
-    width: 4px;
-    height: 79px;
+/* 스크롤바 전체 영역 */
+.container-mycola::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 스크롤이 움직이는 영역 */
+.container-mycola::-webkit-scrollbar-track {
+    background-color: #EAE8FE;
+    border-radius: 50px;
+}
+
+/* 스크롤 */
+.container-mycola::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 50px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
 }
 
 .item-mycola {
@@ -287,12 +318,12 @@ section .gain {
     border-radius: 5px;
 }
 
-.gain-p {
+.gain-h2 {
     font-weight: 700;
     margin: 25px 0 13px;
 }
 
-.amount-p {
+.amount-h3 {
     font-size: 12px;
     margin-top: 6px;
     text-align: right;
