@@ -70,7 +70,7 @@ main {
 }
 
 .item-cola:hover:not(.violet) {
-    border: 3px solid #6327FE;
+    box-shadow: 0 0 0 3px #6327FE;
 }
 
 
